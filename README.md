@@ -1,58 +1,44 @@
-# 🐟 Kaquarium - Aquarium Fish Mortality Detection
 
-YOLOv8 기반 객체 인식 기술을 활용하여  
-아쿠아리움 내 폐사한 어류를 실시간 감지하는 솔루션입니다.
+# 🐠 Kaquarium: Aquarium Fish Mortality Detection using YOLOv8
 
-어류 폐사는 연쇄 폐사의 주요 원인 중 하나이며,  
-빠른 탐지와 대응을 통해 관람객 만족도 향상 및 수조 생태 안정화에 기여합니다.
+AI 기반 객체 인식으로 아쿠아리움 내 어류 폐사를 조기에 감지하여 연쇄 폐사 방지 및 관람객 만족도를 향상시키는 프로젝트입니다.
 
 ---
 
-## 🔍 주요 기능
+## 🎥 시연 영상
 
-- YOLOv8을 활용한 어류 폐사 인식
-- 실시간 bounding box 시각화 (OpenCV)
-- 폐사 발생 시 관리자에게 즉시 대응 가능하도록 데이터화 가능
-
----
-
-## 🧰 사용 기술
-
-- Python 3.8+
-- [ultralytics](https://github.com/ultralytics/ultralytics) YOLOv8
-- OpenCV
-- NumPy
+- [▶️ 객체 감지 시연 영상 1](https://youtu.be/HsOVlKPL_ks)
+- [▶️ 객체 감지 시연 영상 2](https://youtu.be/eK_0NwUE2U8)
 
 ---
 
-## ▶️ 실행 방법
+## 📊 학습 결과 시각화
+
+| F1 Curve | 학습 이미지 샘플 | 검증 라벨 시각화 |
+|----------|------------------|------------------|
+| ![](./f1_curve.png) | ![](./train_batch0.jpg) | ![](./val_batch1_labels.jpg) |
+
+---
+
+## 🚀 기술 스택
+
+- YOLOv8 객체 탐지
+- OpenCV + Ultralytics
+- Python / PyTorch
+- 커스텀 데이터셋 라벨링 및 학습
+- 실시간 폐사 감지 및 추론 시각화
+
+---
+
+## 📁 프로젝트 구성
 
 ```bash
-git clone https://github.com/your-id/Kaquarium-FishMortality-Detection.git
-cd Kaquarium-FishMortality-Detection
-pip install -r requirements.txt
-python object_tracking_fish.py
+kaquarium/
+├── kaquarium.py           # 실행 코드
+├── data.yaml              # YOLO 학습용 데이터 구성
+├── f1_curve.png           # 학습 성능 시각화
+├── train_batch0.jpg       # 학습 이미지 시각화
+├── val_batch1_labels.jpg  # 검증 이미지 라벨 시각화
+├── README.md              # 프로젝트 소개
+└── ...
 ```
-
-> `fish.mp4`, `best.pt` 파일이 실행 디렉토리에 존재해야 합니다.
-
----
-
-## 🧠 프로젝트 정보
-
-- 📆 개발 기간: 2024년 4월 ~ 2024년 5월
-- 📌 기여도: 100% (데이터 수집, 모델 학습, 코드 작성, 시각화)
-- 🎯 목적: 실시간 어류 폐사 탐지 → 연쇄 폐사 방지 → 운영 효율 및 관람 만족도 향상
-
----
-
-## 🖼️ 시연 예시
-
-> 폐사 개체가 감지되면 실시간으로 bounding box를 통해 구분  
-> 추가적으로 관리자 페이지나 IoT 연동도 가능하도록 확장 가능
-
----
-
-## 📄 라이선스
-
-MIT License
