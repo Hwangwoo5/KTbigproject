@@ -28,11 +28,22 @@
 
 ---
 
-## 📊 시각화 자료
+## 📁 프로젝트 구조
 
-| F1 Curve | 학습 이미지 샘플 | 검증 라벨 시각화 |
-|----------|------------------|------------------|
-| ![](./f1_curve.png) | ![](./train_batch0.jpg) | ![](./val_batch1_labels.jpg) |
+```
+kaquarium/
+├── kaquarium.py           # 객체 인식 및 감지 실행 코드 (메인 코드)
+├── best.pt                # 훈련된 YOLOv8 모델 가중치 파일
+├── data.yaml              # 학습용 데이터셋 설정
+├── f1_curve.png           # 학습 성능 시각화
+├── train_batch0.jpg       # 학습 샘플 이미지
+├── val_batch1_labels.jpg  # 검증 이미지 라벨
+├── README.md              # 프로젝트 소개 문서
+└── ...
+```
+
+> `kaquarium.py`는 실제 감지 모델을 적용한 영상 추론 코드입니다.  
+> `best.pt`는 훈련된 YOLOv8 모델 가중치로, 객체 감지에 직접 사용됩니다.
 
 ---
 
@@ -60,21 +71,6 @@
 | 인건비 절감 | 약 1.3억 원 |
 | 빅데이터 판매 수익 | 약 1.5억 원 |
 | **총 기대 효과** | **약 3.5억 원** |
-
----
-
-## 📁 프로젝트 구조
-
-```
-kaquarium/
-├── kaquarium.py           # YOLOv8 객체 인식 실행 코드
-├── data.yaml              # 학습용 데이터셋 설정
-├── f1_curve.png           # 학습 성능 시각화
-├── train_batch0.jpg       # 학습 샘플 이미지
-├── val_batch1_labels.jpg  # 검증 이미지 라벨
-├── README.md              # 프로젝트 소개 문서
-└── ...
-```
 
 ---
 
