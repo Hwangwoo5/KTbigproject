@@ -1,0 +1,6 @@
+names:
+- Dead
+- Alive
+nc: 2
+train: C:/Users/User/bigpro_modeling/data2/train/images/
+val: C:/Users/User/bigpro_modeling/data2/valid/images/

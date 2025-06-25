@@ -1,0 +1,7 @@
+train='C:/Users/User/bigpro_modeling/data2/train/images/',
+val='C:/Users/User/bigpro_modeling/data2/valid/images/',
+nc=2,
+  names=[
+  'Dead',
+  'Alive']
+)
